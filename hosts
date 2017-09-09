@@ -1,0 +1,18 @@
+# some servers
+[set1]
+192.168.60.4
+192.168.60.5
+
+# another server
+[set2]
+192.168.60.6
+
+# Group 'multi' with all servers
+[multi:children]
+set1
+set2
+
+# Variables that will be applied to all servers
+[multi:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
