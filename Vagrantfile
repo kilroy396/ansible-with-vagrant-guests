@@ -19,18 +19,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Some server 1.
   config.vm.define "server1" do |app|
     app.vm.hostname = "server1.dev"
-    app.vm.network :private_network, ip: "192.168.60.4"
+    app.vm.network :private_network, ip: "10.1.3.4"
   end
   
   # Some server 2.
   config.vm.define "server2" do |app|
     app.vm.hostname = "server2.dev"
-    app.vm.network :private_network, ip: "192.168.60.5"
+    app.vm.network :private_network, ip: "10.1.3.5"
   end
   
   # Some server 3.
   config.vm.define "server3" do |db|
     db.vm.hostname = "server3.dev"
-    db.vm.network :private_network, ip: "192.168.60.6"
+    db.vm.network :private_network, ip: "10.1.3.6"
   end
 end
