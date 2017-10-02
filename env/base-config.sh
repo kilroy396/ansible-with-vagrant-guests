@@ -1,3 +1,5 @@
+#!/bin/sh -e
+
 yum install ntp -y
 sudo mv /etc/localtime /etc/localtime.bak
 sudo ln -s /usr/share/zoneinfo/Australia/ACT /etc/localtime
