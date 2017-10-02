@@ -5,10 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # General Vagrant VM configuration.
-  #config.vm.box = "geerlingguy/centos7"
-  #config.vm.box = "centos/7"
-  config.vm.box = "kilroy396/centos7-h"
-  #config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "kilroy396/centos7-w"
   config.ssh.insert_key = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provision :shell, :path => "env/base-config.sh"
